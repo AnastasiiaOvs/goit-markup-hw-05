@@ -435,93 +435,147 @@ background-color: var(--color-ocean);
     text-decoration: none;
   }
 
-/* Футер */
-.footer {
+ /* Футер */
+ .footer {
     background-color: var(--color-navyblue);
     color: var(--color-cloud);
     font-size: 16px;
     line-height: 1.5;
     padding: 100px 0;
-}
+  }
 
-.footer-container {
+  .footer-container {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-}
+  }
 
-.div-logo {
+  .div-logo {
     margin-right: 120px;
-}
+  }
 
-/* Логотип */
-.footer_logo {
+  /* Логотип */
+  .footer_logo {
     display: inline-block;
     margin-bottom: 16px;
-}
+  }
 
-span.studio {
+  span.studio {
     color: var(--color-cloud);
-}
+  }
 
-.final_text {
+  .final_text {
     color: var(--color-cloud);
     max-width: 264px;
-}
+  }
 
-.social-media-text {
+  .social-media-text {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-white);
     margin-bottom: 16px;
-}
-.social-media-menu-footer {
+  }
+
+  .social-media-menu-footer {
     display: flex;
     gap: 16px;
-}
+  }
 
-.social-media-elements {
+  .social-media-elements {
     width: 40px;
     height: 40px;
-}
+  }
 
-.media-icons-footer {
+  .media-icons-footer {
     width: 24px;
     height: 24px;
     fill: var(--color-cloud);
-}
-
-.ellipse-container-footer {
-display: flex;
-width: 40px;
-height: 40px;
-background-color: var(--color-iris);
-border-radius: 50%;
-justify-content: center;
-align-items: center;
-}
-
-li:first-child .ellipse-container-footer {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-}
-
-.ellipse-container-footer:hover,
-.ellipse-container-footer:focus {
-    background-color: var(--color-green);
-}
-
-.send-icon {
-    position: absolute; 
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    fill: var(--color-white);
-    pointer-events: none;
   }
 
-/* Бекдроп і модальне вікно */
+  .ellipse-container-footer {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-iris);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li:first-child .ellipse-container-footer {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .ellipse-container-footer:hover,
+  .ellipse-container-footer:focus {
+    background-color: var(--color-green);
+  }
+
+  .form-container {
+    margin-left: auto;
+  }
+
+  .form-text {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+  }
+
+  .subscribe-form {
+    display: flex;
+    gap: 24px;
+  }
+
+  .form-label {
+    display: flex;
+  }
+
+  .input-field {
+    width: 264px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: #ffffff;
+  }
+
+  .input-field::placeholder {
+    color: #ffffff;
+  }
+
+  .form-button {
+    min-width: 165px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #4D5AE5;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .form-icon {
+    margin-left: 16px;
+  }
+
+  /* Бекдроп і модальне вікно */
 .backdrop {
     background-color: rgba(46, 47, 66, 0.4);
     position: fixed;
@@ -668,7 +722,6 @@ border-color: var(--color-iris);
 fill: var(--color-iris);
   }
 
-
 .modal {
     background-color: var(--color-dairy);
     border-radius: 4px;
@@ -681,8 +734,6 @@ fill: var(--color-iris);
     overflow-y: auto;
     position: relative;
 }
-
-
   
   /* Чекбокс і кнопка відправки даних */
 .checkbox_div {
@@ -697,7 +748,7 @@ fill: var(--color-iris);
     color: var(--color-lightslate);
 }
 
-  .privacy {
+.privacy {
     font-size: 12px;
     color: #757575;
     display: flex;
