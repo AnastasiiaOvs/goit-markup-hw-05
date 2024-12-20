@@ -603,7 +603,7 @@ background-color: var(--color-ocean);
 .modal {
     background-color: var(--color-dairy);
     position: absolute;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     border-radius: 4px;
@@ -732,7 +732,7 @@ margin-bottom: 16px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .input-icon:focus {
+  input:focus + .input-icon {
     fill: var(--color-iris);
   }
   
@@ -741,10 +741,10 @@ margin-bottom: 16px;
     margin-bottom: 24px; 
 }
 
-input[type="checkbox"]:checked + span {
+input:checked + .user-privacy > .privacy-span {
     background-color: var(--color-ocean);
+    fill; var(--color-cloud);
     border: none;
-    fill: var(--color-cloud);
 }
 
 .user-privacy {
