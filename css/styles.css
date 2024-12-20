@@ -778,7 +778,7 @@ input:checked + .user-privacy > .privacy-span {
   }
   
   .privacy-class {
-    color: #4a56e2;
+    color: var(--color-iris);
     text-decoration: underline;
   }
 
