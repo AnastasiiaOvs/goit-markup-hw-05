@@ -613,7 +613,7 @@ background-color: var(--color-ocean);
    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
    padding: 72px 24px 24px 24px; 
     max-width: 408px;
-    max-height: 80%;
+    min-height: 584px; 
     overflow-y: auto;
 }
 
@@ -667,7 +667,7 @@ background-color: var(--color-ocean);
     margin-bottom: 8px; 
   }
   
-  .name {
+  .input-label {
     display: block;
     line-height: 1.17; 
     letter-spacing: 0.04em; 
@@ -695,6 +695,10 @@ background-color: var(--color-ocean);
   .input:hover,
   .input:focus {
     border-color: var(--color-iris);
+  }
+
+  .input-icon:focus {
+    fill: var(--color-iris);
   }
 
   .input-textarea {
