@@ -535,7 +535,7 @@ background-color: var(--color-ocean);
     display: flex;
   }
 
-  .input-field {
+  .input-field-subscribe {
     width: 264px;
     height: 40px;
     border: 1px solid #ffffff;
@@ -549,7 +549,7 @@ background-color: var(--color-ocean);
     color: #ffffff;
   }
 
-  .input-field::placeholder {
+  .input-field-subscribe::placeholder {
     color: #ffffff;
   }
 
@@ -573,6 +573,7 @@ background-color: var(--color-ocean);
 
   .form-icon {
     margin-left: 16px;
+    fill: var(--color-white);
   }
 
   /* Бекдроп і модальне вікно */
@@ -591,7 +592,6 @@ background-color: var(--color-ocean);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    padding: 72px 24px 24px 24px; 
 }
 
 .backdrop.is-open {
@@ -602,12 +602,19 @@ background-color: var(--color-ocean);
 }
 
 .modal {
-   position: absolute;
+    background-color: var(--color-dairy);
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+                0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+                0px 1px 1px 0px rgba(0, 0, 0, 0.14);
    top: 50%;
    left: 50%; 
-   min-height: 584px; 
    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   margin-bottom: 8px; 
+   padding: 72px 24px 24px 24px; 
+    max-width: 408px;
+    max-height: 80%;
+    overflow-y: auto;
 }
 
 /* Кнопка закриття модального вікна */
@@ -628,11 +635,7 @@ background-color: var(--color-ocean);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
-.close-button:hover {
-    border: none; 
-    fill: var(--color-white);
-}
-
+.close-button:hover,
 .close-button:focus {
     background-color: var(--color-ocean);
     border: none; 
@@ -648,8 +651,6 @@ background-color: var(--color-ocean);
     color: var(--color-navyblue);
     line-height: 1.5;
     border: none;
-    padding-top: 72px;
-    padding-bottom: 16px;
     font-weight: 500; 
     text-align: center; 
     margin-bottom: 16px; 
@@ -663,9 +664,11 @@ background-color: var(--color-ocean);
     color: var(--color-lightslate);
     font-size: 12px;
     font-weight: 400;
+    margin-bottom: 8px; 
   }
   
   .name {
+    display: block;
     line-height: 1.17; 
     letter-spacing: 0.04em; 
     margin-bottom: 4px; 
@@ -689,9 +692,13 @@ background-color: var(--color-ocean);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  .input-field:hover,
-  .input-field:focus {
-border-color: var(--color-iris);
+  .input:hover,
+  .input:focus {
+    border-color: var(--color-iris);
+  }
+
+  .input-textarea {
+margin-bottom: 16px;
   }
 
   .textarea_input {
@@ -703,6 +710,10 @@ border-color: var(--color-iris);
     border: 1px solid rgba(46, 47, 66, 0.4);
     padding: 8px 16px; 
     resize: none;
+  }
+
+  .textarea_input:focus {
+    border-color: var(--color-iris);
   }
 
   .input-icon {
@@ -719,29 +730,19 @@ border-color: var(--color-iris);
   }
 
   .input-icon:focus {
-fill: var(--color-iris);
+    fill: var(--color-iris);
   }
-
-.modal {
-    background-color: var(--color-dairy);
-    border-radius: 4px;
-    padding: 24px;
-    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
-                0px 1px 3px 0px rgba(0, 0, 0, 0.12),
-                0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-    max-width: 408px;
-    max-height: 80%;
-    overflow-y: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
   
   /* Чекбокс і кнопка відправки даних */
 .checkbox_div {
     margin-bottom: 24px; 
 }
 
+input[type="checkbox"]:checked + span {
+    background-color: var(--color-ocean);
+    border: none;
+    fill: var(--color-cloud);
+}
 
 .user-privacy {
     font-size: 12px; 
@@ -779,6 +780,7 @@ fill: var(--color-iris);
   }
   
   .btn-send {
+    display: block;
     background-color: var(--color-iris);
     color: var(var(--color-white));
     border: none;
@@ -786,15 +788,16 @@ fill: var(--color-iris);
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    width: 100%;
+    min-width: 169px;
+    height: 56px;
     margin-top: 10px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--color-white);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
   }
   
   .btn-send:hover {
     background-color: #4048d3;
-  }
-
-  input[type="checkbox"]:checked {
-    background-color: var(--color-ocean);
-    border: none; 
   }
