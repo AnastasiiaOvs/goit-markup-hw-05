@@ -743,7 +743,7 @@ margin-bottom: 16px;
 
 input:checked + .user-privacy > .privacy-span {
     background-color: var(--color-ocean);
-    fill; var(--color-cloud);
+    fill: var(--color-cloud);
     border: none;
 }
 
